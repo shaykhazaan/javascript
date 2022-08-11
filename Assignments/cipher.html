@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var s = "doselect";
+       
+/*
+ * Complete the 'solution' function below.
+ * 
+ * The function is expected to return an STRING.
+ * The function accepts STRING s as parameter.
+ * 
+ */
+
+    function solution(s) {
+	// Write your code here
+        const str =   s.split("");
+        const strLen = str.length;
+	    var arr = [];
+        var rev = [];
+        const outputArr = [];
+        
+        var i = 97;
+        var j = 123;
+        for(k = i; k < j; k++){
+		//convert the char code to string (Alphabets)
+		arr.push(String.fromCharCode(k));
+		//print the result in console
+        }
+
+        for(k = j-1; k>=i; k--){
+            rev.push(String.fromCharCode(k));
+        }
+        
+       
+
+            
+            
+        for(let i=0; i<strLen; i++){
+
+                arr.forEach((element, index) => {
+                    
+                    if (str[i] === element){
+                       console.log(element+ " " + "is present at index: " + index);
+                       outputArr.push(rev[index]);
+                    }
+                });
+                    
+
+                
+            
+        }
+
+        const outputString = outputArr.join('');
+        console.log(outputString);
+        
+
+    }
+
+
+
+
+    solution(s);
+
+    </script>
+</body>
+</html>

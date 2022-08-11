@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Sequence</title>
+</head>
+<body>
+    <script>
+        var n = Number(prompt("Enter an integer N"));
+        var s = String(prompt("Enter a String of length: " + n));
+
+
+        function solution(n, str){
+            let s = str.split("");
+            const vowels = ["a","e","i","o","u"];
+            const len = vowels.length;
+            const subStr = [];
+            let i = 0;
+            
+            if (n <= 1){
+                console.log("Insert a Higher value.");
+            }
+            else if(n >= 10**5){
+                console.log("Insert a value less then previous one.");
+            }
+            else{
+                
+                while(i < len){
+                    for(let x of s){
+                        if(vowels[i] === x){
+                            subStr.push(x);
+                        }
+                    }
+                    i++;
+                }
+            }
+            
+            console.log(subStr.length);
+            
+        }
+
+
+
+
+        solution(n, s);
+
+    </script>
+</body>
+</html>
